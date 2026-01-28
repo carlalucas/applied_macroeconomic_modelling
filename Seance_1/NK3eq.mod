@@ -6,9 +6,9 @@ close all;
 %----------------------------------------------------------------
 % 1. Defining variables
 %----------------------------------------------------------------
-var    y pi r e_D e_S e_R;
-varexo eta_D eta_S eta_R;
-parameters  beta sigma varphi rho phi_pi phi_y theta rho_D rho_S rho_R;
+var    y pi r e_D e_S e_R;                  %endogenous variables
+varexo eta_D eta_S eta_R;                   %exogenous variables 
+parameters  beta sigma varphi rho phi_pi phi_y theta rho_D rho_S rho_R; %parameters
 
 %----------------------------------------------------------------
 % 2. Calibration
@@ -27,7 +27,7 @@ rho_S   = 0.95;
 rho_R 	= 0.40;
 
 %----------------------------------------------------------------
-% 3. Model
+% 3. Model --> dynamic equations 
 %----------------------------------------------------------------
 model(linear); 
 	[name='IS curve']
